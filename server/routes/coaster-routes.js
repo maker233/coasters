@@ -12,6 +12,7 @@ router.get('/getAllCoasters', (req, res, next) => {
 
 
 router.post("/postCoaster", (req, res) => {
+  console.log(req.body)
   Coaster.create(req.body)
     .then(data => res.json(data))
     .catch(err => console.log(err))
